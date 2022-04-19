@@ -10,7 +10,6 @@ async function main() {
 
   console.log("Helloer deployed to:", helloer.address);
 
-  // require("@nomiclabs/hardhat-etherscan");
   // await hre.run("verify:verify", {
   //   address: helloer.address,
   //   constructorArguments: [
