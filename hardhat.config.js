@@ -22,14 +22,17 @@ module.exports = {
       url: "http://127.0.0.1:8545"
     },
     hardhat: {
+      forking: { // mainnet fork
+        url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALECHEMY_MAINNET}`,
+      }
     },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFRA_KEY}`,
-      accounts: [process.env.ETH_ACCOUNT_PK, ],
+      accounts: [process.env.ETH_ACCOUNT_PK,],
     },
     ropsten: {
       url: `https://ropsten.infura.io/v3/${process.env.INFRA_KEY}`,
-      accounts: [process.env.ETH_ACCOUNT_PK, ],
+      accounts: [process.env.ETH_ACCOUNT_PK,],
     }
   },
   etherscan: {

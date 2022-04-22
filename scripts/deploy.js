@@ -3,17 +3,16 @@ const hre = require("hardhat");
 async function main() {
   // await hre.run('compile');
 
-  const Helloer = await hre.ethers.getContractFactory("Helloer");
-  const helloer = await Helloer.deploy("Hello, Shuge!");
+  const Contract = await hre.ethers.getContractFactory("Helloer");
+  const contract = await Contract.deploy("Hello, Simon!");
+  await contract.deployed();
 
-  await helloer.deployed();
-
-  console.log("Helloer deployed to:", helloer.address);
+  console.log("Contract deployed to:", helloer.address);
 
   // await hre.run("verify:verify", {
-  //   address: helloer.address,
+  //   address: contract.address,
   //   constructorArguments: [
-  //       "Hello, Shuge!",
+  //       "Hello, Simon!",
   //   ],
   // });
 
